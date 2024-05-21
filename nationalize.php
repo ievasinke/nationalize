@@ -17,7 +17,7 @@ $genderContent = json_decode(file_get_contents("https://api.genderize.io?name=".
 $ageContent = json_decode(file_get_contents("https://api.agify.io?name=".urlencode($name)));
 $nationalityContent = json_decode(file_get_contents("https://api.nationalize.io?name=".urlencode($surname)));
 
-function getProbability($probability): int
+function getProbability(float $probability): int
 {
     return round($probability * 100);
 }
